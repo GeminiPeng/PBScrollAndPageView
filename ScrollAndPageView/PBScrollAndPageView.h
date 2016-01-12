@@ -16,4 +16,12 @@
 @property (nonatomic,assign)NSInteger currenPage;
 @property (nonatomic,strong)NSMutableArray *imageArray;
 @property (nonatomic,readonly)UIScrollView *scrollview;
+@property (nonatomic,readonly)UIPageControl *pageControl;
+-(void)shouldAutoShow:(BOOL)shouldStart;
+@end
+@protocol PBScrollViewDelegate <NSObject>
+
+@optional
+- (void)didClickPage:(PBScrollAndPageView *)view atIndex:(NSInteger )index;
+
 @end
